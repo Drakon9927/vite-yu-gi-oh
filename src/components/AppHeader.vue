@@ -19,5 +19,6 @@ export default {
 <style scoped>
 header {
     height: 3rem;
+    padding: 10px;
 }
 </style>

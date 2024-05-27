@@ -12,7 +12,7 @@ export default {
 <template>
     <main>
         <div class="container-fluid w-100 mybgc">
-            <div class="container mymaxwidth">
+            <div class="container mymaxwidth p-4">
                 <select id="exampleSelect">
                 <option value="opzione1">Alien</option>
                 <option value="opzione2">Drago</option>
