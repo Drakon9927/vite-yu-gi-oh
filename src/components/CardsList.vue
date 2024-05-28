@@ -1,28 +1,25 @@
 <template>
   <div>
-    <single-card
-      v-for="card in carte"
-      :key="card.id"  
-      :card="card"
-    ></single-card>
+    <SingleCard v-for="card in store.carte" :key="card.id" :card="card" />
   </div>
 </template>
 
 <script>
 import { store } from '../store.js';
+import SingleCard from './SingleCard.vue';
 
 export default {
   name: 'CardsList',
   components: {
-    SingleCard: () => import('./SingleCard.vue')
+    SingleCard,
   },
   created() {
-    store.fetchCarte(); 
+    store.fetchCarte();
   },
   data() {
     return {
-      carte: store.carte
+      store,
     };
-  }
-}
+  },
+};
 </script>
